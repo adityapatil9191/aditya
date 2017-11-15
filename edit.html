@@ -1,0 +1,34 @@
+<div class = "col-md-12">
+ <form>
+  <div class="form-group">
+    <label for="Id">Id</label>
+    <input type="number" ng-model = "id" class="form-control" id="Id">
+  </div>
+  <div class="form-group">
+    <label for="Name">Name:</label>
+    <input type="text" class="form-control" ng-model = "name" id="name" pattern=".{4,} required>
+  </div>
+  <div class="form-group">
+    <label for="Phone">Phone:</label>
+    <input type="number" class="form-control" ng-model = "phone" id="Phone" required>
+  </div>
+  <div class="form-group">
+    <label for="City">City:</label>
+    <input type="text" class="form-control" ng-model = "city" id="City">
+  </div>
+  <div class="form-group">
+    <label for="Address1">Address1:</label>
+    <input type="text" class="form-control" ng-model = "address1" id="Address1">
+  </div>
+  <div class="form-group">
+    <label for="Address2">Address2:</label>
+    <input type="text" class="form-control" ng-model = "address2" id="Address2">
+  </div>
+    <div class="form-group">
+    <label for="Postal Code">Postal Code:</label>
+    <input type="text" class="form-control" ng-model = "postalCode" id="PostalCode">
+  </div>
+   
+  <button  class="btn btn-default" ng-click = "edit(empid)">Submit</button>
+</form> 
+</div>

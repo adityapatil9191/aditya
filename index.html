@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CRUD</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script  src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-route.js"></script>
+	<script src = "controller.js"></script>
+</head>
+<body ng-app = "myapp" >
+<p><a href = "#!employees!add">Add new</a></p>
+
+
+<div ng-controller = "myController">
+<div class="col-md-12">
+	<input type = "text" ng-model = "textvalue"/>
+	<table class="table table-striped">
+	<tr>
+		<th>Id</th>
+	
+		<th>Name</th>
+	
+		<th>Phone</th>
+	
+		<th>City</th>
+	
+		<th>Address1</th>
+	
+		<th>Address2</th>
+	
+		<th>Postal Code</th>
+	</tr>
+	<tr ng-repeat = "employee in employees | filter :textvalue">
+		<td>{{employee.id}}</td>
+		<td>{{employee.name}}</td>
+		<td>{{employee.phone}}</td>
+		<td>{{employee.address.city}}</td>
+		<td>{{employee.address.address_line1}}</td>
+		<td>{{employee.address.address_line2}}</td>
+		<td>{{employee.address.postal_code}}</td>
+		<td><p><a href = "#!employees!:id!edit">Edit</a></p></td>
+	</tr>
+	<div ng-view></div>
+
+</table>
+</div>
+</div>
+</body>
+</html>
